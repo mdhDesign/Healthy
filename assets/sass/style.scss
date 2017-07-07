@@ -1,0 +1,270 @@
+$color-one: #070f14;
+
+/**********************
+  General
+***********************/
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.6rem;
+}
+
+a, a:hover, a:focus {
+  color: inherit;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/**********************
+  Menu
+***********************/
+.main-menu {
+  margin: 0;
+  background-color: white;
+  border-radius: 0;
+  .navbar-brand {
+    background-color: #7bd24d;
+    color: white;
+  }
+  .navbar-toggle {
+    .icon-bar {
+      background-color: $color-one;
+    }
+  }
+  @media (min-width: 768px) {
+    padding: 30px 0;
+
+  }
+}
+.mid-menu, .social {
+  @media (min-width: 768px) {
+    li {
+      a {
+        padding: 0;
+        margin: 15px 15px;
+        &:hover {
+          background-color: initial;
+          color: #7bd24d;
+        }
+      }
+    }
+  }
+}
+.mid-menu {
+  li {
+    a {
+      color: $color-one;
+    }
+  }
+  @media (min-width: 768px) {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-65%);
+    font-size: 1.8rem;
+  }
+  @media (min-width: 992px) {
+    font-size: 2.2rem;
+  }
+}
+.social {
+  li {
+    display: inline-block;
+    a {
+      color: #4d748b;
+    }
+  }
+}
+
+/**********************
+  Hero
+***********************/
+.button {
+  display: inline-block;
+  padding: 20px 45px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(to bottom, rgba(123,210,77,1) 0%, rgba(106,179,66,1) 100%);
+
+  &:hover {
+    background: linear-gradient(to top, rgba(123,210,77,1) 0%, rgba(106,179,66,1) 100%);
+  }
+}
+.hero {
+  position: relative;
+  padding-top: 90px;
+
+  min-height: 499px;
+  background-size: cover;
+  background-position: center;
+  h1 {
+    font-size: 4rem;
+    color: white;
+    text-align: center;
+  }
+  .contact-form {
+    position: absolute;
+    left: 50%;
+    padding: 15px 30px;
+    width: 100%;
+    max-width: 360px;
+    background-color: #FBFAEE;
+    border-top: 6px solid #D9D490;
+    transform: translateX(-50%);
+    box-shadow: 0px 0px 61px 0px rgba(0, 0, 0, 0.14);
+
+    h3 {
+      color: #4F758D;
+      span {
+        color: rgba(123,210,77,1);
+      }
+    }
+    input, textarea {
+      display: block;
+      width: 100%;
+      margin: 25px 0;
+      padding: 7px 10px;
+      border: 1px solid #D6DFE1;
+      border-radius: 2px;
+    }
+
+  }
+  @media (min-width: 768px) {
+    padding-top: 190px;
+    min-height: 650px;
+    h1 {
+      font-size: 7.3rem;
+      text-align: left;
+    }
+    .contact-form {
+      left: auto;
+      margin-top: 100px;
+      max-width: none;
+      transform: none;
+      h3 {
+        font-size: 3.6rem;
+      }
+      input, textarea {
+        padding: 15px 20px;
+      }
+    }
+  }
+}
+
+// About us
+.about {
+  padding: 200px 0;
+  color: #4d748b;
+  h2 {
+    font-size: 2.8rem;
+    font-weight: 600;
+  }
+  p {
+    font-size: 1.6rem;
+    line-height: 1.5;
+  }
+  @media (min-width: 768px) {
+    padding: 90px 0;
+    h2 {
+      font-size: 3rem;
+      font-weight: 600;
+    }
+    p {
+      font-size: 1.8rem;
+      line-height: 1.6;
+    }
+  }
+}
+
+// Services
+.services {
+  padding: 90px 0;
+  background-color: #fbfaee;
+  color: #4d748b;
+  h2 {
+    margin-bottom: 30px;
+    font-size: 3rem;
+    font-size: 600;
+  }
+  h3 {
+    margin-top: 30px;
+    font-size: 2.4rem;
+    font-weight: 600;
+  }
+  p {
+    margin-bottom: 50px;
+    font-size: 1.6rem;
+    line-height: 1.5;
+  }
+  img {
+    width: 210px;
+    height: 210px;
+    padding: 10px;
+    background-color: #FBFAEE;
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.10);
+    border-radius: 210px;
+  }
+  @media (min-width: 768px) {
+    h2 {
+      margin-bottom: 90px;
+    }
+    p {
+      margin-bottom: 90px;
+      font-size: 1.8rem;
+      line-height: 1.6;
+    }
+  }
+}
+
+//footer
+.footer {
+  padding: 50px 0;
+  background-color: #f6f4e2;
+  color: #668597;
+  text-align: center;
+  p {
+    margin-bottom: 30px;
+  }
+  .social {
+    display: inline-block;
+    margin-bottom: 0;
+    li {
+      a {
+        padding: 0;
+        margin: 15px 15px;
+        &:hover {
+          background-color: initial;
+          color: #7bd24d;
+        }
+      }
+    }
+  }
+  @media (min-width: 768px) {
+    text-align: left;
+    p {
+      margin-bottom: 0;
+    }
+    .social {
+
+    }
+  }
+}
